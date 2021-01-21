@@ -1,0 +1,152 @@
+@import './vars/colors';
+@import './vars/layouts';
+@import './mixins.scss';
+
+
+#container {
+    box-sizing: border-box;
+    width: $resume-width;
+    height: $resume-height;
+    padding: 0 $resume-margins;
+    font-family: 'Calibri', serif;
+    // border: 1px solid red;
+}
+
+.header {
+    
+    font-family: 'Calibri', serif;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 0.5in max-content max-content max-content 0.5in;
+    grid-template-rows: 2fr 20px;
+    grid-column-gap: 15px;
+
+    &__title {
+        font-size: 32px;
+        text-align: center;
+        white-space: nowrap;
+        font-weight: bold;
+        color: $header-color;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    &__blurb {
+        margin: 0 auto;
+
+        &__person {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        &__phone {
+            grid-column-start: 3;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        &__email {
+            grid-column-start: 4;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 2;
+        }
+
+        &__icon {
+            color: $header-color;
+            margin-right: 5px;
+        }
+
+        &__text {
+            font-weight: bold;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+    }
+}
+
+.professional-experience-section {
+    
+}
+
+.education-section {
+    
+}
+
+.education-section__project-title, .experience-section__language-blurbs {
+    font-weight: bold;
+}
+
+.professional-experience-section, .education-section {
+
+    margin-top: 35px;
+
+    &__section-title {
+
+        &__header {
+            font-weight: bold;
+            color: $header-color;
+            margin: 20px 0px -10px -20px;
+        }
+
+        &__divider {
+            // background-color: $header-color;
+            // width: 100%;
+            // height: 2px;
+        }
+    }
+
+    &__section-content {
+
+        &__header {
+            color: $header-color;
+            white-space: nowrap;
+            margin: 10px 0 0 0;
+            transform: translateX(-10px);
+        }
+
+        &__info {
+
+            color: black;
+            font-weight: 400;
+
+            &__dates {
+
+            }
+
+            &__location {
+                
+            }
+        }
+
+        &__bullets {
+
+            &__bullet {}
+
+            &__bullet__content {
+
+                position: relative;
+                padding-left: 5px;
+                margin-top: 5px;
+
+                &::before {
+                    position: absolute;
+                    content: "•";
+                    left: -5px;
+                }
+              }
+
+            &__subbullet_content {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
